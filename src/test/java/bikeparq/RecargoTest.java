@@ -17,4 +17,9 @@ class RecargoTest {
         assertEquals(3000, Recargo.aplicarRecargoNocturno(3000, 19));
         assertEquals(3000, Recargo.aplicarRecargoNocturno(3000, 6));
     }
+
+    @Test
+    void noSumaRecargoCuandoLaTarifaEsCero() {
+        assertEquals(0, Recargo.aplicarRecargoNocturno(0, 23));
+    }
 }
